@@ -1,0 +1,23 @@
+<form *ngIf="showAddAuthor" class="add-form" (ngSubmit)="onSubmit()">
+  <div class="form-control">
+    <label for="id">ID</label>
+    <input
+      type="text"
+      name="id"
+      [(ngModel)]="id"
+      id="id"
+      placeholder="Add ID"
+    />
+  </div>
+  <div class="form-control">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      name="name"
+      [(ngModel)]="name"
+      id="name§"
+      placeholder="Enter Author Name"
+    />
+    <input type="submit" value="Save Author" class="btn btn-block" />
+  </div>
+</form>

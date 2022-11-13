@@ -1,0 +1,11 @@
+<div class="task">
+  <h3>
+    {{ author.id
+    }}<fa-icon
+      (click)="onDelete(author)"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <p>{{ author.name }}</p>
+</div>

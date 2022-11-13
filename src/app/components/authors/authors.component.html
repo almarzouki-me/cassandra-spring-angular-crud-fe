@@ -1,0 +1,6 @@
+<app-add-author (onAddAuthor)="addAuthor($event)"></app-add-author>
+<app-author-item
+  *ngFor="let author of authors"
+  [author]="author"
+  (onDeleteAuthor)="deleteAuthor(author)"
+></app-author-item>

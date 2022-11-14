@@ -13,6 +13,8 @@ import { AuthorsComponent } from './components/authors/authors.component';
 import { AddAuthorComponent } from './components/add-author/add-author.component';
 import { AuthorItemComponent } from './components/author-item/author-item.component';
 import { AboutComponent } from './components/about/about.component';
+import { AuthorService } from './services/author.service';
+import { UiService } from './services/ui.service';
 
 const appRoutes: Routes = [
   { path: '', component: AuthorsComponent },
@@ -37,7 +39,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [
+    AuthorService,
+    UiService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

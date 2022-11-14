@@ -27,7 +27,7 @@ export class AddAuthorComponent implements OnInit {
 
   onSubmit() {
     if (!this.id || !this.name) {
-      alert('Please add a task!')
+      alert('Please add an author!')
       return
     }
 
@@ -37,9 +37,7 @@ export class AddAuthorComponent implements OnInit {
     }
 
     this.onAddAuthor.emit(newAuthor)
-
     this.id = '',
     this.name = ''
   }
-
 }

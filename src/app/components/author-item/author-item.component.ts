@@ -16,12 +16,12 @@ export class AuthorItemComponent implements OnInit {
   constructor() { 
   }
 
+
   ngOnInit(): void {
-    console.log(this.author.id)
   }
 
   onDelete(author: Author): void {
-    this.onDeleteAuthor.emit(author)
+    this.onDeleteAuthor.emit(author)  
   }
   
 }

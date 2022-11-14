@@ -13,12 +13,16 @@ export class AuthorsComponent implements OnInit {
   
   
   constructor(private authorService: AuthorService) { 
-
+  
   }
 
   ngOnInit(): void {
-    this.authorService.getAuthors().subscribe((authors) => this
-      .authors = authors)
+    this.authorService.getAuthors().subscribe((authors) => {      
+      this.authors = authors
+    } )
+  }
+
+  ngOnChanges(): void {
   }
 
   deleteAuthor(author: Author) {
@@ -27,8 +31,9 @@ export class AuthorsComponent implements OnInit {
   }
 
 
-  addAuthor(author: Author) {
-    this.authorService.addAuthor(author).subscribe((author) => (this.authors.push(author)))
+  addAuthor(author: Author) {      
+    this.authorService.addAuthor(author).subscribe((res) => {
+      (this.authors.push(author))
+    })
   }
-
 }
